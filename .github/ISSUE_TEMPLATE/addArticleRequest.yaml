@@ -1,0 +1,53 @@
+name: 新しい記事の追加依頼
+description: 現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)にないページの追加を依頼するフォームです。
+title: "article_<ここに記事タイトルを入力>"
+labels:
+  - 記事追加
+body:
+  - type: markdown
+    attributes:
+      value: |
+        新しい記事の追加を依頼します。
+
+  - type: textarea
+    attributes:
+      label: あなたが追加したい記事のタイトルはなんですか？
+      description: 想定しているタイトルを入力してください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: そのページは他のページとどのような関係を持ちますか?
+      description: |
+        - 他のページとの親子関係を[パンくずリスト](https://www.asobou.co.jp/blog/web/breadcrumb-list)の形式で書いてください。
+            - 例えばアクセスなら`ホーム > 施設紹介 > アクセス`となります
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: あなたが追加したい記事はどのような内容ですか？
+      description: |
+        - 追加したいページに含まれている内容を箇条書きで書いてください。
+        - 各行を`- `(半角ハイフンと半角スペース)で始める形で箇条書きすると投稿時にきれいに表示されます。
+            - この行のように"入れ子"にしたい(インデントしたい)場合は、`-`の前に` `(半角スペース)を4つ入れてください。
+                - 半角スペースをさらに4つ増やせば2段階下にすることもできます。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: あなたが追加したい記事の本文を記入してください。
+      description: |
+        - 可能な限り[markdown](https://www.markdown.jp/what-is-markdown/)形式で記述してください。
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 補足があればここに書いてください。
+      description: |
+        - 各種補足情報を箇条書きで書いてください。
+    validations:
+      required: false

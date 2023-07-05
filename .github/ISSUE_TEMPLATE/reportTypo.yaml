@@ -1,0 +1,40 @@
+name: 誤字脱字を報告する
+description: 現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)に存在する誤字脱字を報告します。
+title: "typo_<ここに不具合の内容を簡潔に記入>"
+labels:
+  - typo
+body:
+  - type: markdown
+    attributes:
+      value: |
+        サイトに存在する誤字脱字を報告します。
+
+        - すでに同じ誤字脱字が報告されていないか、[Issue一覧](https://github.com/AyaExpTech/FY23-OmiyaFW/issues)より確認してください。
+        - 誤字脱字以外の不具合/ミス/バグは [不具合(バグ)を報告する]() から報告してください。
+
+  - type: textarea
+    attributes:
+      label: 誤字脱字が存在する場所はどこですか？
+      description: |
+        ページを開き、誤字脱字の該当箇所を選択して右クリックします。  
+        出てくるメニューから「選択箇所へのリンクをコピー」をクリックして、自動でコピーされるURLを入力欄に貼り付けてください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: その部分は本来どのように表示されるべきですか？
+      description: |
+        - 先程選択した部分の正しいテキストを記入してください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 補足があればここに書いてください。
+      description: |
+        - 各種補足情報を箇条書きで書いてください。
+        - 再現に"端末・OS・ブラウザ"以外の条件が必要な場合はここに書いてください。
+        - その他、開発メンバーに伝えるべきと思われることがあればここに書いてください。
+    validations:
+      required: false
