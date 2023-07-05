@@ -1,0 +1,205 @@
+/*==============================================================
+    webフォントの読み込み
+==============================================================*/
+
+/* 'M PLUS 1p' */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500&display=swap');
+
+/*==============================================================
+    変数設定
+==============================================================*/
+
+:root {
+    /* 文字の太さ */
+    --normal: 400;
+    --bold: 500;
+}
+
+/*==============================================================
+    リセットCSSと親要素の指定
+==============================================================*/
+
+html {
+    /* 基準単位を指定(remで参照) */
+    font-size: 16px;
+    /* スムーズスクロールの設定 */
+    scroll-behavior: smooth;
+    /* フォント指定 */
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: var(--normal);
+    color: #f2f2f2;
+    /* 行高の設定 */
+    line-height: 1.5;
+    /* 背景を黒に */
+    background-color: #000000;
+}
+
+:target {
+    scroll-margin-top: 6rem;
+}
+
+body {
+    opacity: 0;
+    pointer-events: none;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+    vertical-align: baseline;
+    font-family: 'M PLUS 1p';
+    color: #eee;
+}
+
+:where(ul, ol) {
+    padding-left: 1.5rem;
+}
+
+/*==============================================================
+    背景画像
+==============================================================*/
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+}
+
+#background>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.15) grayscale(0.9);
+}
+
+/*==============================================================
+    ヘッダー部分
+==============================================================*/
+
+header {
+    /* サイズの設定 */
+    width: 100%;
+    height: 5rem;
+    /* 位置を画面上部に固定 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    /* 背景色をコーポレートカラーに */
+    background-color: #222244;
+    /* 影の指定 */
+    box-shadow: 0rem 0rem 1rem #00000077;
+    /* flexboxの設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header>a>img {
+    /* サイズの設定 */
+    width: 3.5rem;
+    height: 3.5rem;
+    /* 中央に置くための設定 */
+    margin: 0.75rem 0;
+    /* マウス選択禁止 */
+    user-select: none;
+    /* 色を変える */
+    filter: brightness(6) grayscale(0.9);
+}
+
+header>p {
+    /* 中央に置くための設定 */
+    line-height: 1;
+    font-size: 2rem;
+    margin: 1.25rem 0;
+}
+
+/*==============================================================
+    メインコンテンツ部分の配置
+==============================================================*/
+
+main {
+    /* 大きさの設定 */
+    width: 100%;
+    margin-top: 5rem;
+    /* flexboxの設定 */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+main>article {
+    /* 大きさの設定 */
+    width: 70%;
+    /* 余白の設定 */
+    margin: 1rem 0.5rem;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF633, #EEEEF622);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+main>div.sidebar {
+    /* 大きさの設定 */
+    width: 30%;
+    /* 余白の設定 */
+    margin: 1rem 0.5rem;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF633, #EEEEF622);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/*==============================================================
+    スマホ向けの設定
+==============================================================*/
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        height: 4rem;
+    }
+
+    header>img {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem 0;
+    }
+
+    header>p {
+        font-size: 1.5rem;
+        margin: 1.75rem 0;
+    }
+
+    main {
+        margin-top: 4rem;
+        flex-direction: column;
+    }
+
+    main>:is(article, div.sidebar) {
+        width: calc(100% - 1rem);
+    }
+}

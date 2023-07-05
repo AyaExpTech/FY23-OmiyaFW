@@ -1,0 +1,453 @@
+/* ==== h1 - 大見出し ==== */
+:is(article, div.sidebar)>h1 {
+    /* 余白の設定 */
+    margin: 0.5rem;
+    /* 太字&大きめにする */
+    font-size: 1.6rem;
+    font-weight: var(--bold);
+    /* 上下のpaddingを少し取る */
+    padding: 0.2rem 0;
+    /* 左のpaddingを1文字分取る */
+    padding-left: 1rem;
+    /* beforeで作る左枠のために基準positionになれるようにする */
+    position: relative;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #E8E8FF33, #EEEEF622);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== h1::before - 大見出し ==== */
+:is(article, div.sidebar)>h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.75rem;
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #222244;
+}
+
+/* ==== section - 記事の区間分け ==== */
+:is(article, div.sidebar) section {
+    /* 余白設定 */
+    margin: 0.5rem;
+    /* beforeで作る左枠のために基準positionになれるようにする */
+    position: relative;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF60E, #EEEEF608);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== h2 - 小見出し ==== */
+:is(article, div.sidebar) section>h2 {
+    /* 太字&大きめにする */
+    font-size: 1.4rem;
+    font-weight: var(--bold);
+    /* 上下のpaddingを少し取る */
+    padding: 0.1rem 0;
+    /* 左のpaddingを1文字分取る */
+    padding-left: 1rem;
+    /* marginを取る */
+    margin: 0.5rem;
+    /* beforeで作る左枠のために基準positionになれるようにする */
+    position: relative;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF60E, #EEEEF608);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== h2::before - 小見出し ==== */
+:is(article, div.sidebar) section>h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #222222;
+}
+
+/* ==== p - 段落 ==== */
+:is(article, div.sidebar) section p {
+    /* 余白を取る */
+    margin: 0.5rem;
+    padding: 0.25rem;
+}
+
+/* ==== img - 画像 ==== */
+:is(article, div.sidebar) section img {
+    /* 余白を取る */
+    margin: 0.5rem;
+    /* 最大サイズを指定 */
+    min-height: 1rem;
+    max-height: 25vh;
+    max-width: calc(100% - 1rem);
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF60E, #EEEEF608);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== table - 表 ==== */
+:is(article, div.sidebar) section table {
+    /* 大きさ設定 */
+    width: calc(100% - 1rem);
+    /* 余白を取る */
+    margin: 0.5rem;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF60E, #EEEEF608);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== th,td - 表のセル ==== */
+:is(article, div.sidebar) section :is(th, td) {
+    /* 色を少しだけ黒くする */
+    background: linear-gradient(to bottom, #0000004f, #0000003f);
+    border-radius: 0.5rem;
+    /* 余白を取る */
+    padding: 0.1rem 0.5rem;
+    /* 内部要素を中央揃え */
+    text-align: center;
+    vertical-align: middle;
+    /* 溢れ時に改行を許可 */
+    word-break: break-all;
+}
+
+/* ==== a:not(:has(img)) - リンク(画像以外) ==== */
+:is(article, div.sidebar) section a:not(:has(img)) {
+    /* 通常の装飾を打ち消す */
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    /* 左右に余白を取る */
+    margin: 0 0.25rem;
+    padding: auto 0.25rem;
+    /* beforeで作る下線のために基準positionになれるようにする */
+    position: relative;
+}
+
+/* ==== a:not(:has(img))::before - リンク(画像以外) ==== */
+:is(article, div.sidebar) section a:not(:has(img))::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    /* アニメーションを指定 */
+    transition: height 0.2s, background-color 0.2s;
+    /* 色を指定 */
+    background-color: #8888C388;
+}
+
+/* ==== a:not(:has(img)):hover::before - リンク(画像以外) ==== */
+:is(article, div.sidebar) section a:not(:has(img)):hover::before {
+    height: 100%;
+    background-color: #8888C344;
+}
+
+/* ==== :is(h3, h4, h5, h6) - 小見出し ==== */
+:is(article, div.sidebar) section :is(h3, h4, h5, h6) {
+    /* 太字&大きめにする */
+    font-size: 1.15rem;
+    font-weight: var(--bold);
+    /* 上下のpaddingを少し取る */
+    padding: 0.1rem 0;
+    /* 左のpaddingを1文字分取る */
+    padding-left: 1rem;
+    /* marginを取る */
+    margin: 0.5rem;
+    /* beforeで作る左枠のために基準positionになれるようにする */
+    position: relative;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to bottom, #EEEEF60E, #EEEEF608);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== :is(h3, h4, h5, h6)::before - 小見出し ==== */
+:is(article, div.sidebar) section :is(h3, h4, h5, h6)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #303030;
+}
+
+/* ==== blockquote - 引用段落 ==== */
+:is(article, div.sidebar) section blockquote {
+    /* 上下のpaddingを少し取る */
+    padding: 0.1rem 0;
+    /* 左のpaddingを1文字分取る */
+    padding-left: 1rem;
+    /* marginを取る */
+    margin: 0.5rem;
+    /* beforeで作る左枠のために基準positionになれるようにする */
+    position: relative;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to left, #00000077, #00000055);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== blockquote::before - 引用段落 ==== */
+:is(article, div.sidebar) section blockquote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.5rem;
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #1A1A1A;
+}
+
+/* ==== cite - 出典 ==== */
+:is(article, div.sidebar) section cite {
+    /* ブロック要素に変更 */
+    display: block;
+    /* 余白を取る */
+    margin: 0.25rem 0.75rem 0.5rem;
+    padding: 0.25rem;
+    /* フォントサイズを小さく */
+    font-size: 0.8rem;
+    font-style: normal;
+    /* 左に線を入れる */
+    border-left: solid #1A1A1A 0.25rem;
+}
+
+/* ==== blockquote+cite - 引用段落の出典 ==== */
+:is(article, div.sidebar) section blockquote+cite {
+    /* 斜字に */
+    font-style: italic;
+}
+
+/* ==== blockquote+cite::before - 引用段落の出典 ==== */
+:is(article, div.sidebar) section blockquote+cite::before {
+    content: "“"
+}
+
+/* ==== blockquote+cite::after - 引用段落の出典 ==== */
+:is(article, div.sidebar) section blockquote+cite::after {
+    content: "”より"
+}
+
+/* ==== :is(b, strong) - 注目付け・強調(太字) ==== */
+:is(article, div.sidebar) section :is(b, strong) {
+    font-weight: var(--bold);
+}
+
+/* ==== :is(i, em) - 慣用表現・強調(斜字) ==== */
+:is(article, div.sidebar) section :is(i, em) {
+    font-style: italic;
+}
+
+/* ==== :is(s, strike, del) - 削除済み・取り消し(打ち消し線) ==== */
+:is(article, div.sidebar) section :is(s, strike, del) {
+    text-decoration: line-through 1px;
+}
+
+/* ==== u - 下線付き ==== */
+:is(article, div.sidebar) section u {
+    text-decoration: underline 1px;
+}
+
+/* ==== abbr - 略語 ==== */
+:is(article, div.sidebar) section abbr {
+    text-decoration: underline dashed 1px;
+    margin: auto 0.25rem;
+}
+
+/* ==== pre:has(code) - コードブロック ==== */
+:is(article, div.sidebar) section pre:has(code) {
+    /* marginを取る */
+    margin: 0.5rem;
+    padding: 0.5rem;
+    /* 文字設定 */
+    line-height: 1.25;
+    font-family: monospace;
+    /* beforeで作る左枠のために基準positionになれるようにする */
+    position: relative;
+    /* 右端に到達したら容赦なく折り返す */
+    overflow-wrap: break-word;
+    table-layout: fixed;
+    word-break: break-all;
+    /* グラスモーフィズム ここから */
+    background: linear-gradient(to left, #000000AA, #00000088);
+    border: 1px solid #EEEEF688;
+    border-right-color: #EEEEF633;
+    border-bottom-color: #EEEEF633;
+    /* backdrop-filter: blur(0.25rem);
+    transform: translateZ(0); */
+    box-shadow: 0.25rem 0.25rem 0.5rem #00000077;
+    border-radius: 0.5rem;
+    min-height: 1rem;
+    /* グラスモーフィズム ここまで */
+}
+
+/* ==== pre>code - コードブロック ==== */
+:is(article, div.sidebar) section pre>code {
+    font-family: monospace;
+    max-width: 100%;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+/* ==== code:not(pre>code) - インラインコード ==== */
+:is(article, div.sidebar) section code:not(pre>code) {
+    background-color: #1A1A1A;
+    color: #CCCCCC;
+    font-family: monospace;
+    padding: 0.05rem 0.5rem;
+    border-radius: 1rem;
+}
+
+/* ==== q - 文中引用 ==== */
+:is(article, div.sidebar) section q {
+    background-color: #CCCCCC;
+    color: #1A1A1A;
+    font-family: monospace;
+    padding: 0.05rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* ==== q::before - 文中引用 ==== */
+:is(article, div.sidebar) section q::before {
+    /* UAスタイルシートで鉤括弧がつくので消去 */
+    content: "";
+}
+
+/* ==== q::after - 文中引用 ==== */
+:is(article, div.sidebar) section q::after {
+    /* UAスタイルシートで鉤括弧がつくので消去 */
+    content: "";
+}
+
+/* ==== a>img - 画像リンク ==== */
+:is(article, div.sidebar) section a>img {
+    /* リンクっぽさを与えるアニメーション */
+    transition: transform 0.3s, filter 0.3s;
+    transform: scale(1);
+    filter: brightness(100%);
+    /* 枠線を少しだけ強調 */
+    border-width: 2px;
+}
+
+/* ==== a>img:hover - 画像リンク ==== */
+:is(article, div.sidebar) section a>img:hover {
+    /* アニメーション */
+    transform: scale(1.01);
+    filter: brightness(110%);
+}
+
+/* ==== a>img:active - 画像リンク ==== */
+:is(article, div.sidebar) section a>img:active {
+    /* アニメーション */
+    transform: scale(0.99);
+    filter: brightness(90%);
+}
+
+/* ==== sub - 下付き文字 ==== */
+:is(article, div.sidebar) section sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+/* ==== sup - 上付き文字 ==== */
+:is(article, div.sidebar) section sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+/* ==== :is(ul,ol):not(li>:is(ul,ol)) - 字下げされてないリスト ==== */
+:is(article, div.sidebar) section :is(ul, ol):not(li>:is(ul, ol)) {
+    /* 余白を取る */
+    margin: 0.5rem;
+}
+
+/*==============================================================
+    横並びレイアウト
+==============================================================*/
+
+/* div[column] - 横並びレイアウトのあれ */
+:is(article, div.sidebar) section div[column] {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    --c: 2;
+    margin: 0 0.5rem;
+    /* attr()がnumberに対応すればattr(column)が使えます */
+}
+
+div[column]>section {
+    width: calc(calc(100% / var(--c)) - 1rem);
+    margin: 0.5rem;
+}
+
+/*==============================================================
+    スマホ向けの設定
+==============================================================*/
+@media screen and (max-width: 600px) {
+    div[column]>section {
+        width: calc(100% - 1rem);
+    }
+}
