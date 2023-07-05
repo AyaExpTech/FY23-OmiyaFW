@@ -1,5 +1,5 @@
 name: 不具合(バグ)を報告する
-description: 現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)で起こる不具合(バグ)を報告します。
+description: ページ閲覧時に起こる不具合について報告します。
 title: "bug_<ここに不具合の内容を簡潔に記入>"
 labels:
   - バグ
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ページ閲覧時に起こる不具合について報告します。
+        現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)で起こる不具合(バグ)を報告します。
 
         - すでに似た不具合が報告されていないか、[Issue一覧](https://github.com/AyaExpTech/FY23-OmiyaFW/issues)より確認してください。
         - ある程度状況を再現する方法が確立されているととても助かります。

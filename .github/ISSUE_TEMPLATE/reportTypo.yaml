@@ -1,5 +1,5 @@
 name: 誤字脱字を報告する
-description: 現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)に存在する誤字脱字を報告します。
+description: サイトに存在する誤字脱字を報告します。
 title: "typo_<ここに不具合の内容を簡潔に記入>"
 labels:
   - typo
@@ -7,10 +7,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        サイトに存在する誤字脱字を報告します。
+        現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)に存在する誤字脱字を報告します。
 
         - すでに同じ誤字脱字が報告されていないか、[Issue一覧](https://github.com/AyaExpTech/FY23-OmiyaFW/issues)より確認してください。
-        - 誤字脱字以外の不具合/ミス/バグは [不具合(バグ)を報告する]() から報告してください。
+        - 誤字脱字以外の不具合/ミス/バグは [不具合(バグ)を報告する](https://github.com/AyaExpTech/FY23-OmiyaFW/issues/new?assignees=&labels=%E3%83%90%E3%82%B0&projects=&template=reportBug.yaml&title=bug_%3C%E3%81%93%E3%81%93%E3%81%AB%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E7%B0%A1%E6%BD%94%E3%81%AB%E8%A8%98%E5%85%A5%3E) から報告してください。
 
   - type: textarea
     attributes:

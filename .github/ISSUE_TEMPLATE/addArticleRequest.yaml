@@ -1,5 +1,5 @@
 name: 新しい記事の追加依頼
-description: 現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)にないページの追加を依頼するフォームです。
+description: 新しい記事の追加を依頼します。
 title: "article_<ここに記事タイトルを入力>"
 labels:
   - 記事追加
@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        新しい記事の追加を依頼します。
+        現時点で[公開サイト](https://ayaexptech.github.io/FY23-OmiyaFW/)にないページの追加を依頼するフォームです。
 
   - type: textarea
     attributes:
