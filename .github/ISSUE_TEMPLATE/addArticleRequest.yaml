@@ -46,6 +46,22 @@ body:
 
   - type: textarea
     attributes:
+      label: 記事に追加するべき画像のリンクを入力してください。
+      description: |
+        - 記事に追加するべき画像をGoogle Driveなどにアップロードし、共有リンクを箇条書きで記入してください。
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 記事の文章の引用元・画像の提供元のクレジット表記を入力してください。
+      description: |
+        - 各画像と文章の引用元(著作権者とソースURL)を箇条書きで記入してください。
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
       label: 補足があればここに書いてください。
       description: |
         - 各種補足情報を箇条書きで書いてください。
