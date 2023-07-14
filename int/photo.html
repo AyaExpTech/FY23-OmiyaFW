@@ -15,13 +15,27 @@
             display: block;
             max-height: revert;
         }
+
+        :is(article, div.sidebar) section .imgContainingLinks {
+            position: relative;
+        }
+
+        :is(article, div.sidebar) section .imgContainingLinks>a {
+            display: block;
+            position: absolute;
+        }
     </style>
 </head>
 
 <body>
     <section>
-        <img src="./img/recreation/フォトコンテスト1.png" alt="フォトコンテストページの画像1" class="fullWidth">
+        <div class="imgContainingLinks fullWidth">
+            <img src="/img/recreation/フォトコンテスト1.png" alt="" class="fullWidth">
+            <a href="https://n-highschool.slack.com/archives/C05FHJQ3MHV" style="top:85%;bottom:10%;left:22%;right:22%;"
+                target="_blank"></a>
+        </div>
         <img src="./img/recreation/フォトコンテスト2.png" alt="フォトコンテストページの画像2" class="fullWidth">
+        <a href="https://www.seibu-leisure.co.jp/amusementpark/index.html">画像の提供元のクレジット表記</a>
     </section>
 </body>
 
