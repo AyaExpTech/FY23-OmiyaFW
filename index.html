@@ -10,10 +10,36 @@
     <link rel="stylesheet" href="./ref/style.css">
     <link rel="stylesheet" href="./ref/document.css">
     <script src="./ref/script.js"></script>
+    <style>
+        :is(article, div.sidebar) section:has(img.big) {
+            position: relative;
+        }
+
+        :is(article, div.sidebar) section img.big {
+            display: block;
+            min-height: 85vh;
+            margin: 0 auto;
+        }
+
+        :is(article, div.sidebar) section img.bg {
+            position: absolute;
+            z-index: -1;
+            display: block;
+            min-height: 85vh;
+            width: 100%;
+            filter: blur(12px);
+            opacity: 0.5;
+        }
+    </style>
 </head>
 
 <body>
-    <article></article>
+    <article>
+        <section>
+            <img src="./img/home-mainVisual.png" alt="" class="bg">
+            <img src="./img/home-mainVisual.png" alt="" class="big">
+        </section>
+    </article>
 </body>
 
 </html>
